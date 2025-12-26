@@ -746,6 +746,7 @@ header .navbar{
     }
      .menu-section .menu-list .menu-item .menu-image{
         max-width: 200px;
+        user-select: none;
      }
     .gallery-section .gallery-list .gallery-item{
     display: flex;
@@ -754,6 +755,7 @@ header .navbar{
     flex-direction: column;
     justify-content: space-between;
     width: calc(100% /2 - 32px);
+    user-select: none;
 }
 .contact-section .section-content{
     align-items: center;
@@ -786,6 +788,7 @@ header .navbar{
     }
     .menu-section .menu-list .menu-item{
         width: 100%;
+        user-select: none;
 
  }
  .testimonials-section .swiper-button-prev{
@@ -805,6 +808,7 @@ header .navbar{
     flex-direction: column;
     justify-content: space-between;
     width: calc(100% /1 );
+    user-select: none;
 }
 .footer-section .section-content{
     flex-direction: column;
