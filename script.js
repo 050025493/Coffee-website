@@ -1,11 +1,18 @@
+const navLinks=document.querySelectorAll(".nav-menu .nav-link");
 const menuOpenButton=document.querySelector("#menu-open-button");
 const menuCloseButton=document.querySelector("#menu-close-button");
 menuOpenButton.addEventListener("click",() => {
     //toggle mobile menu dikhega
     document.body.classList.toggle("show-mobile-menu");
 });
+//toggle mobile menu close hoga
 menuCloseButton.addEventListener("click",() => menuOpenButton.click());
-    //toggle mobile menu close hoga
+    
+navLinks.forEach(link =>{
+  link.addEventListener("click",()=> menuOpenButton.click());
+
+});
+
 
 
 //initialize wsipper
