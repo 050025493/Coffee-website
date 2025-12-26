@@ -71,7 +71,24 @@ img{
 
 
 }
- 
+.section-title{
+    padding:60px 0 100px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: var(--font-size-xl);
+    
+
+}
+.section-title::after{
+    content: "";
+    width: 80px;
+    height:5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+}
+
 
 /*Navbar Styling*/
 header{
@@ -90,7 +107,7 @@ header .navbar{
 }
 .navbar .nav-logo .logo-text{
     color: var(--white-color);
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-l);
     font-weight: var(--font-weight-semibold);
 
 
@@ -229,6 +246,135 @@ header .navbar{
     
 }
 
+/*About Section*/
+.about-section{
+    padding: 120px 0;
+    
+    background: var(--light-pink-color);
+
+}
+.about-section .section-content{
+    display:flex;
+    align-items: center;
+    gap:50px;
+    justify-content: space-between;
+
+}
+.about-section .about-image-wrapper{
+    height: 400px;
+    overflow: hidden;
+    border-radius: var(--border-radius-circle);
+}
+.about-section .about-image-wrapper .about-img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius-circle);
+    transition: .5s ease-in-out;
+    
+
+    
+    
+
+
+}
+
+.about-section .about-image-wrapper .about-img:hover{
+    transform: scale(1.5);
+    }
+
+.about-section .about-details .section-title{
+    padding:0;
+
+}
+.about-section .about-details{
+    max-width: 50%;
+}
+
+.about-section .about-details .text{
+    line-height: 30px;
+    margin:50px 0 30px;
+    text-align:center;
+    font-size: var(--font-size-m);
+
+}
+.about-section  .social-link-list {
+    display: flex;
+    gap:25px;
+    justify-content: center;
+}
+.about-section .social-link-list .social-link{
+    color:var(--primary-color);
+     font-size: var(--font-size-l);
+     transition: .3s ease;
+}
+.about-section .social-link-list .social-link:hover{
+    color:var(--secondary-color);
+    transform: scale(1.2);
+    
+}
+
+/*menu-section*/
+.menu-section{
+    background:  var(--dark-color);
+    color: var(--white-color);
+}
+
+
+.menu-section .menu-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap:110px;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-section .menu-list .menu-item{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% /3 - 110px);
+    
+}
+.menu-section .menu-list .menu-item .menu-image{
+    max-width: 83%;
+    aspect-ratio: 1;
+    animation: float 8s ease-in-out infinite;
+    transform-style: preserve-3d ;
+    will-change: transform,scale ;
+    cursor: pointer;
+    transition: scale 1s ease-in-out;
+    
+    
+    
+}
+.menu-section .menu-list .menu-item .menu-image:hover{
+    
+    scale: 1.1;
+
+
+}
+@keyframes float {
+    0%{
+        transform:translateY(0px) ;
+        
+
+    }
+    50%{
+        transform: translateY(-30px);
+        
+    }
+    100%{
+        transform: translateY(0px) ;
+        
+    }
+    
+}
+
+
+
+/*Responsive view for all */
 @media screen and (max-width:900px) {
     :root{
     --font-size-m:1rem;
@@ -236,6 +382,16 @@ header .navbar{
     --font-size-xl:1.5rem;
     --font-size-xxl:1.8rem;
 
+    }
+    body.show-mobile-menu header::before{
+        content:"";
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(7px);
+        background: rgba(0,0,0,0.2);
     }
     #menu-close-button, 
     #menu-open-button {
@@ -276,6 +432,35 @@ header .navbar{
 
 
     }
+    .hero-section .section-content{
+        gap:50px;
+        text-align: center;
+        padding :30px 20px 20px;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .hero-section .hero-details :is(.subtitle,.description) .about-section .about-details{
+        max-width: 100%;
+        
+
+    }
+    .hero-section .hero-details .buttons{
+        justify-content: center;
+    }
+     .hero-section .hero-image-wrapper{
+        max-width:270px;
+        margin-right:0;
+
+     }
+     .about-section .section-content{
+        gap:70px;
+        flex-direction: column-reverse;
+     }
+     .about-section .about-image-wrapper .about-img{
+        display: none;
+     }
+
+
     
 
 
