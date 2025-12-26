@@ -5,7 +5,10 @@
         <meta name="viewport" content="width=device-width ,initial-scale=1.0">
         <title> Coffee Website</title>
         <link rel="stylesheet" href="style.css">
+         <!-- swiper-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+       
 
     </head>
     <body>
@@ -21,15 +24,15 @@
 
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Home</a>
+                        <a href="#hero" class="nav-link">Home</a>
 
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">About</a>
+                        <a href="#About" class="nav-link">About</a>
 
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Menu</a>
+                        <a href="#Menu" class="nav-link">Menu</a>
 
                     </li>
                     <li class="nav-item">
@@ -51,7 +54,7 @@
         <main>
 
             <!--hero section-->
-            <section class="hero-section">
+            <section id="hero" class="hero-section">
                 <div class="section-content">
                     <div class="hero-details">
                         <h2 class="title">Best Coffee</h2>
@@ -71,7 +74,7 @@
 
             </section>
             <!--about section-->
-            <section class="about-section">
+            <section id="About" class="about-section">
                 <div class="section-content">
                     <div class="about-image-wrapper">
                         <img src="/assets/about-image.jpg" alt="About" class="about-img">
@@ -93,7 +96,7 @@
                 </div>
             </section>
             <!-- menu-section-->
-             <section class="menu-section">
+            <section id="Menu" class="menu-section">
                 <h2 class="section-title">Our Menu</h2>
                 <div class="section-content">
                     <ul class="menu-list">
@@ -109,7 +112,7 @@
                         </li>
                          <li class="menu-item">
                             <img src="assets/burger-frenchfries.png" alt="Burger" class="menu-image">
-                            <h3 class="name">Burger and FrenchFries</h3>
+                            <h3 class="name">Burger and Fries</h3>
                             <p class="text">Wide range of crispy and tasty burgers and fries to make every moment worth the bite</p>
                         </li>
                          
@@ -134,12 +137,68 @@
                     
                     
 
+            </section>
+            <!-- Testimonials-section-->
+             <section class="testimonials-section">
+                <h2 class="section-title">Testimonials</h2>
+                <div class="section-content">
+                    <div class="slider-container swiper">
+                        <div class="slider-wrapper">
+                            <ul class="testimonials-list swiper-wrapper">
+                                <li class="testimonial swiper-slide">
+                                    <img src="assets/user-1.jpg" alt="User 1" class="user-image">
+                                    <h3 class="name">Sandhya Pal</h3>
+                                    <i class="feedback">"Loved the food made by your chef Saket".Will order him again!</i>
+                                </li>
+                                <li class="testimonial swiper-slide">
+                                    <img src="assets/user-2.jpg" alt="User 2" class="user-image">
+                                    <h3 class="name">Adwait Pande</h3>
+                                    <i class="feedback">"Loved everything, I was not feeling well or would have ordered whole menu"</i>
+                                </li>
+                                <li class="testimonial swiper-slide">
+                                    <img src="assets/user-3.jpg" alt="User 3" class="user-image">
+                                    <h3 class="name">Nishchay Aggarwal</h3>
+                                    <i class="feedback">"Loved the coffee, felt like it was made by my imaginary girlfriend."</i>
+                                </li>
+                                <li class="testimonial swiper-slide">
+                                    <img src="assets/user-4.jpg" alt="user 4" class="user-image">
+                                    <h3 class="name">Prawalika Attri</h3>
+                                    <i class="feedback">"My boyfriend took me here for our date. I ended up dumping him, but the food was amazing!"</i>
+                                </li>
+                                 <li class="testimonial swiper-slide">
+                                    <img src="assets/user-5.jpg" alt="user 4" class="user-image">
+                                    <h3 class="name">Shyam Bishnoi</h3>
+                                    <i class="feedback">"Went for a date here with my girlfriend, she broke up with me"</i>
+                                </li>
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+
+  
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+             </section>
+
+             <section class="gallery-section">
+                <h2 class="section-title">Gallery</h2>
+                <div class="section-content">
+                    
+
+                </div>
              </section>
 
 
         </main>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
         <script src="script.js"></script>
+        
 
 
     </body>

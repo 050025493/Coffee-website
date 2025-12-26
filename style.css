@@ -49,6 +49,10 @@
 
 }
 /*whole page styling*/
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top: 120px;
+}
 ul{
     list-style: none;
 }
@@ -318,6 +322,7 @@ header .navbar{
 .menu-section{
     background:  var(--dark-color);
     color: var(--white-color);
+    padding: 50px 0 100px;
 }
 
 
@@ -371,10 +376,111 @@ header .navbar{
     }
     
 }
+.menu-section .menu-list .menu-item .name{
+    font-size: var(--font-size-l);
+    margin:12px 0;
+    font-weight: var(--font-weight-semibold);
+    color: #f3961c;
+    
+}
+.menu-section .menu-list .menu-item .text{
+    font-size: var(--font-size-s);
+}
+
+/*Testimonials Styling*/
+.testimonials-section{
+    padding:50px 0 100px;
+    background:  var(--light-pink-color);
+
+
+}
+.testimonials-section .slider-wrapper{
+    overflow:hidden;
+    margin:0 60px 50px;
+}
+.testimonials-section .testimonial{
+    display: flex;
+    padding: 35px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+
+    
+}
+.testimonials-section .testimonial .user-image{
+    width: 180px;
+    height: 180px;
+    object-fit: cover ;
+    margin-bottom: 50px;
+    border-radius: var(--border-radius-circle);
+    
+
+
+}
+.testimonials-section .testimonial  .name{
+    margin-bottom: 16px;
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-semibold);
+
+}
+.testimonials-section .testimonial  .feedback{
+    line-height: 25px;
+    
+
+}
+
+.testimonials-section .swiper-pagination-bullet{
+    height: 15px;
+    width: 15px;
+    opacity: 1;
+    background: var(--secondary-color);
+    transition:  .3s ease-in-out;
+}
+.testimonials-section .swiper-pagination-bullet:active{
+    background:var(--primary-color);
+}
+.testimonials-section .swiper-button-next{
+    margin-top:-50px;
+    color:var(--secondary-color);
+    opacity: 1;
+    transition: color .3s ease-in-out;
+    
+
+}
+.testimonials-section .swiper-button-next:hover{
+    color: var(--primary-color);
+    
+    
+
+}
+.testimonials-section .swiper-button-prev{
+    margin-top:-50px;
+    color:var(--secondary-color);
+    opacity:1;
+    transition: color .3s ease-in-out;
+}
+.testimonials-section .swiper-button-prev:hover{
+    color: var(--primary-color);
+    
+    
+
+}
 
 
 
-/*Responsive view for all */
+/*responsive view for 1024px*/
+@media screen and (max-width:1024px){
+    .menu-section .menu-list{
+        gap:60px;
+    }
+    .menu-section .menu-list .menu-item{
+        width: calc(100% / 3 - 60px);
+    }
+
+
+}
+
+/*Responsive view for 900px */
 @media screen and (max-width:900px) {
     :root{
     --font-size-m:1rem;
@@ -432,15 +538,17 @@ header .navbar{
 
 
     }
-    .hero-section .section-content{
+    .hero-section .section-content {
         gap:50px;
         text-align: center;
         padding :30px 20px 20px;
         flex-direction: column-reverse;
         justify-content: center;
+        align-items: center;
     }
-    .hero-section .hero-details :is(.subtitle,.description) .about-section .about-details{
+    .hero-section .hero-details :is(.subtitle , .description), .about-section .about-details{
         max-width: 100%;
+        
         
 
     }
@@ -452,6 +560,10 @@ header .navbar{
         margin-right:0;
 
      }
+     .about-section{
+        max-height: 600px;
+     }
+    
      .about-section .section-content{
         gap:70px;
         flex-direction: column-reverse;
@@ -459,12 +571,38 @@ header .navbar{
      .about-section .about-image-wrapper .about-img{
         display: none;
      }
+      .menu-section .menu-list{
+        gap:30px;
+    }
+    .menu-section .menu-list .menu-item{
+        width: calc(100% / 2 - 30px);
+    }
+     .menu-section .menu-list .menu-item .menu-image{
+        max-width: 200px;
+     }
 
+ }
+/*responsive for 600px*/
+ @media screen and (max-width:600px){
+     .menu-section .menu-list{
+        gap:30px;
+    }
+    .menu-section .menu-list .menu-item{
+        width: 100%;
 
-    
+ }
+ .testimonials-section .swiper-button-prev{
+    display: none;
 
-
-    
+ }
+ .testimonials-section .swiper-button-next{
+    display: none;
+ }
+ .testimonials-section .slider-wrapper{
+    margin: 0 0 30px;
+ }
+ 
 }
+
 
 
